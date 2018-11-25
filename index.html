@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">BlindTest</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Cinéma <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Musique</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<button type="button" id="commencer" style="margin-top: 25px;" class="btn btn-success btn-lg btn-block">Commencer</button>
+
+<div id="formReponse" class="text-center" style="visibility: hidden; margin-top: 0px; ">
+<button type="button" id="lireMusique" class="btn btn-danger">Lire la musique</button>
+<audio id="audioPlayer"></audio>
+<div class="form-group">
+  <label class="col-form-label" for="inputDefault">Entrez votre réponse</label>
+  <input type="text" id="reponseMusique" class="form-control" placeholder="Votre réponse"">
+</div>
+
+<button type="button" disabled="true" id="soumettre" class="btn btn-info">Valider</button>
+<button type="button" disabled="true" id="suivant" class="btn btn-success">Suivant</button>
+
+
+</div>
+
+<div class="text-center" id="zonerep" style="margin-top: 10px; visibility: hidden;">
+	<p>Bien joué !</p>
+	<img src="" id="imageReponse">
+	<p></p>
+</div> 
+<script src="affichage.js"></script>
+ <script src="collection.js"></script>
+ <script src="blindtest.js"></script>
+</body>
+</html>
