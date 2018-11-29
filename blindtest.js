@@ -1,5 +1,6 @@
 //Récupération du premier élement du 
 
+
 var musique = musiques[0];
 var fin = true; //lancement de la musique
 
@@ -11,14 +12,15 @@ function jouer(etatJeu)
 
 	 musique = musiques[0];
 	//fonction lancement musique lors du clic sur lireMusique
-	var player = document.querySelector('#audioPlayer');
+	
 	var lireMusique = document.getElementById("lireMusique");
 	lireMusique.addEventListener("click", function()
 	{
 		player.setAttribute("src", musique.son)
 		soumettre.disabled = false;
 		player.play();
-	});
+
+});
 };
 
 
@@ -49,10 +51,27 @@ soumettre.addEventListener("click",function()
 
 suivant.addEventListener("click", function()
 {	
+if(musiques.length != 0)
+	{
+		
 	zonerep.style.visibility = "hidden";
 	soumettre.disabled =true;
 	jouer(fin);
 	suivant.disabled = true;
+}
+else
+{
+	var formulaireReponse = document.getElementById("formReponse");
+	formulaireReponse.style.visibility ="hidden";
+	document.getElementById("zonerep").style.visibility = "hidden";
+	player.setAttribute("src", "musiques/bryan.mp3");
+	player.play();
+	var imgVictoire = document.createElement("img");
+	imgVictoire.setAttribute("src", "img/bryan.png");
+	document.getElementById("victory").appendChild(imgVictoire);
+
+}
+
 })
 
 
